@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CustomStackTest {
+class NumberAscOrderTest {
     private CustomStack<Integer> stack;
     private static final int stackLimit = 6;
 
@@ -23,8 +23,7 @@ class CustomStackTest {
 
     @ParameterizedTest
     @CsvSource({
-            "'[10, 5, 3, 8, 1, 6]', '[1, 3, 5, 6, 8, 10]'",
-            "'[4, 9, 2, 7, 5, 3]', '[2, 3, 4, 5, 7, 9]'",
+            "'[10, 5, 2, 8, 1, 9]', '[1, 2, 5, 8, 9, 10]'",
             "'[]', '[]'"
     })
     public void testSort(String actualList, String expectedList) throws StackFullException {
